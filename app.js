@@ -50,17 +50,16 @@ function operate() {
     if (
       problem[i] === "+" ||
       problem[i] === "-" ||
-      problem[i] === "*" ||
+      problem[i] === "×" ||
       problem[i] === "/"
     ) {
       let newArr = problem.split(`${problem[i]}`);
       let finalArr = newArr.map(Number);
-      console.log(finalArr);
       if (problem[i] === "+") {
         result = add(finalArr);
       } else if (problem[i] === "-") {
         result = subtract(finalArr);
-      } else if (problem[i] === "*") {
+      } else if (problem[i] === "×") {
         result = multiply(finalArr);
       } else if (problem[i] === "/") {
         result = divide(finalArr);
@@ -87,5 +86,8 @@ function multiply(arr) {
 
 function divide(arr) {
   let result = arr.reduce((a, b) => a / b);
-  return result;
+  if(result === Infinity) {
+    return "ERROR";
+  }
+  else return parseFloat((result).toFixed(2));
 }
