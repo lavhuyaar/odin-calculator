@@ -1,5 +1,5 @@
 # The Odin Project 5 - Calculator
 
-The Final project of TOP Fuundations is done!!! 
+The final project of TOP Foundations is done!!! 
 
 I made this project all by myself (proud moment onli)
